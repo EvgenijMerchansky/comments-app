@@ -1,5 +1,27 @@
 .App {
-  text-align: center;
+  text-align: left;
+  padding: 40px;
+}
+
+textarea{
+  max-width: 1000px;
+  min-width: 600px;
+  padding: 10px;
+  margin: 20px 0;
+  max-height: 150px;
+  min-height: 100px;
+}
+
+.sub-comment{
+  background-color: #ccc;
+  margin-left: 30px;
+}
+
+.generic{
+  background-color: #d2d8d0;
+  padding: 40px 10px;
+  margin: 20px 0;
+  color: #292000;
 }
 
 .App-logo {
@@ -12,6 +34,7 @@
   height: 150px;
   padding: 20px;
   color: white;
+  text-align: center;
 }
 
 .App-intro {

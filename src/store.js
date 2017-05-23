@@ -7,9 +7,9 @@ import  thunk  from 'redux-thunk';
 
 // import reducers from './index'
 
-import testReducer from './reducers/testReducer';
+import reducers from './totalReducer';
 
 const middleware = applyMiddleware(promise(),thunk,logger);
-const store = createStore(testReducer,composeWithDevTools(middleware));
+const store = createStore(reducers,composeWithDevTools(middleware));
 
 export default store

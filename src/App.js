@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 
 import { test } from './actions/commonAction';
 import Common from './containers/common.jsx';
+import SubCommet from './containers/subComment.jsx';
 
 class App extends Component {
   render() {
@@ -19,11 +20,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+
+        {/* <SubCommet/> */}
+        <h1>NEW COMMENT:</h1>
         <br/>
         type your name: <input ref={(input) => {this.userName = input}}></input><br/>
         type your email: <input ref={(input) => {this.userEmail = input}}></input><br/>
-        your comment: <input ref={(input) => {this.inputValue = input}}></input><br/>
-        <button onClick={() => {this.props.test(this.inputValue.value, this.userName.value, this.userEmail.value)}}>ADD COMMENT</button>
+        your comment:<br/> <textarea ref={(textarea) => {this.textarea = textarea}}></textarea><br/>
+        <button onClick={() => {this.props.test(this.textarea.value, this.userName.value, this.userEmail.value)}}>ADD COMMENT</button>
         <Common />
       </div>
     );
